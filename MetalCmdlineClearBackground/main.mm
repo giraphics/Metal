@@ -15,7 +15,7 @@ int main () {
                                                          backing:NSBackingStoreBuffered
                                                            defer:NO];
         [window cascadeTopLeftFromPoint:NSMakePoint(100,100)];
-        window.title = @"Qt Metal display";
+        window.title = @"Clear background..";
         [window makeKeyAndOrderFront:nil];
         
         // Custom MTKView.
