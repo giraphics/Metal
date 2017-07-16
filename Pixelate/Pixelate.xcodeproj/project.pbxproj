@@ -1,0 +1,310 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		26E703F11D79410800F60C2C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E703F01D79410800F60C2C /* AppDelegate.m */; };
+		26E703F41D79410800F60C2C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E703F31D79410800F60C2C /* main.m */; };
+		26E703F71D79410800F60C2C /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E703F61D79410800F60C2C /* GameViewController.m */; };
+		26E703F91D79410800F60C2C /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 26E703F81D79410800F60C2C /* Shaders.metal */; };
+		26E703FC1D79410800F60C2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26E703FB1D79410800F60C2C /* Assets.xcassets */; };
+		26E703FF1D79410800F60C2C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26E703FD1D79410800F60C2C /* MainMenu.xib */; };
+		26E704081D7D14A900F60C2C /* MyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E704071D7D14A900F60C2C /* MyView.m */; };
+		26E7040A1D7D684200F60C2C /* cartoon.png in Resources */ = {isa = PBXBuildFile; fileRef = 26E704091D7D684200F60C2C /* cartoon.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		26E703EC1D79410800F60C2C /* Pixelate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pixelate.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		26E703EF1D79410800F60C2C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		26E703F01D79410800F60C2C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		26E703F31D79410800F60C2C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		26E703F51D79410800F60C2C /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		26E703F61D79410800F60C2C /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		26E703F81D79410800F60C2C /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
+		26E703FB1D79410800F60C2C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		26E703FE1D79410800F60C2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		26E704001D79410800F60C2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26E704061D7D14A900F60C2C /* MyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyView.h; sourceTree = "<group>"; };
+		26E704071D7D14A900F60C2C /* MyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyView.m; sourceTree = "<group>"; };
+		26E704091D7D684200F60C2C /* cartoon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cartoon.png; path = Pixelate/cartoon.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		26E703E91D79410800F60C2C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		26E703E31D79410800F60C2C = {
+			isa = PBXGroup;
+			children = (
+				26E704091D7D684200F60C2C /* cartoon.png */,
+				26E703EE1D79410800F60C2C /* Pixelate */,
+				26E703ED1D79410800F60C2C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		26E703ED1D79410800F60C2C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				26E703EC1D79410800F60C2C /* Pixelate.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		26E703EE1D79410800F60C2C /* Pixelate */ = {
+			isa = PBXGroup;
+			children = (
+				26E703EF1D79410800F60C2C /* AppDelegate.h */,
+				26E703F01D79410800F60C2C /* AppDelegate.m */,
+				26E703F51D79410800F60C2C /* GameViewController.h */,
+				26E703F61D79410800F60C2C /* GameViewController.m */,
+				26E704061D7D14A900F60C2C /* MyView.h */,
+				26E704071D7D14A900F60C2C /* MyView.m */,
+				26E703F81D79410800F60C2C /* Shaders.metal */,
+				26E703FB1D79410800F60C2C /* Assets.xcassets */,
+				26E703FD1D79410800F60C2C /* MainMenu.xib */,
+				26E704001D79410800F60C2C /* Info.plist */,
+				26E703F21D79410800F60C2C /* Supporting Files */,
+			);
+			name = Pixelate;
+			path = Pixelate;
+			sourceTree = "<group>";
+		};
+		26E703F21D79410800F60C2C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				26E703F31D79410800F60C2C /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		26E703EB1D79410800F60C2C /* Pixelate */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 26E704031D79410800F60C2C /* Build configuration list for PBXNativeTarget "Pixelate" */;
+			buildPhases = (
+				26E703E81D79410800F60C2C /* Sources */,
+				26E703E91D79410800F60C2C /* Frameworks */,
+				26E703EA1D79410800F60C2C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Pixelate;
+			productName = Pixelate;
+			productReference = 26E703EC1D79410800F60C2C /* Pixelate.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		26E703E41D79410800F60C2C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Parminder Singh";
+				TargetAttributes = {
+					26E703EB1D79410800F60C2C = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 26E703E71D79410800F60C2C /* Build configuration list for PBXProject "Pixelate" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 26E703E31D79410800F60C2C;
+			productRefGroup = 26E703ED1D79410800F60C2C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				26E703EB1D79410800F60C2C /* Pixelate */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		26E703EA1D79410800F60C2C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26E703FC1D79410800F60C2C /* Assets.xcassets in Resources */,
+				26E7040A1D7D684200F60C2C /* cartoon.png in Resources */,
+				26E703FF1D79410800F60C2C /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		26E703E81D79410800F60C2C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26E703F91D79410800F60C2C /* Shaders.metal in Sources */,
+				26E703F41D79410800F60C2C /* main.m in Sources */,
+				26E703F71D79410800F60C2C /* GameViewController.m in Sources */,
+				26E703F11D79410800F60C2C /* AppDelegate.m in Sources */,
+				26E704081D7D14A900F60C2C /* MyView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		26E703FD1D79410800F60C2C /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				26E703FE1D79410800F60C2C /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		26E704011D79410800F60C2C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		26E704021D79410800F60C2C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		26E704041D79410800F60C2C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Pixelate/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = test.Pixelate;
+				PRODUCT_NAME = Pixelate;
+			};
+			name = Debug;
+		};
+		26E704051D79410800F60C2C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Pixelate/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = test.Pixelate;
+				PRODUCT_NAME = Pixelate;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		26E703E71D79410800F60C2C /* Build configuration list for PBXProject "Pixelate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26E704011D79410800F60C2C /* Debug */,
+				26E704021D79410800F60C2C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		26E704031D79410800F60C2C /* Build configuration list for PBXNativeTarget "Pixelate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26E704041D79410800F60C2C /* Debug */,
+				26E704051D79410800F60C2C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 26E703E41D79410800F60C2C /* Project object */;
+}
