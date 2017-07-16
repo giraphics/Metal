@@ -1,0 +1,1 @@
+clang++ -framework Cocoa -framework Metal -framework MetalKit main.mm -o main.out
