@@ -1,0 +1,3 @@
+
+#define DEFER_ALL_LIGHTING 1
+#define TARGET_MACOS 1

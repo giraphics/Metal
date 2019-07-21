@@ -1,0 +1,27 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Shaders/libs/AAPLSkybox.metallib</file>
+        <file>Shaders/libs/AAPLShadow.metallib</file>
+        <file>Shaders/libs/AAPLPointLights.metallib</file>
+        <file>Shaders/libs/AAPLGBuffer.metallib</file>
+        <file>Shaders/libs/AAPLFairy.metallib</file>
+        <file>Shaders/libs/AAPLDirectionalLight.metallib</file>
+        <file>Shaders/libs/AAPLBufferExamination.metallib</file>
+        <file>Images/Skybox/X-.png</file>
+        <file>Images/Skybox/X+.png</file>
+        <file>Images/Skybox/Y-.png</file>
+        <file>Images/Skybox/Y+.png</file>
+        <file>Images/Skybox/Z-.png</file>
+        <file>Images/Skybox/Z+.png</file>
+        <file>Images/Fairy/fairy.png</file>
+        <file>Images/Temple/FoliageBaseColor.png</file>
+        <file>Images/Temple/FoliageNormals.png</file>
+        <file>Images/Temple/FoliageSpecular.png</file>
+        <file>Images/Temple/StructureBaseColor.png</file>
+        <file>Images/Temple/StructureNormals.png</file>
+        <file>Images/Temple/StructureSpecular.png</file>
+        <file>Images/Misc/3D_left.png</file>
+        <file>Images/Misc/Image.tga</file>
+        <file>Images/Temple/Temple.obj</file>
+    </qresource>
+</RCC>
