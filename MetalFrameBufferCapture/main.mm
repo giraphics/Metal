@@ -173,7 +173,12 @@ struct Vertex
     
     NSString* shaderPath = [[NSBundle mainBundle] pathForResource:@"shaders" ofType:@"metallib"];
     NSLog(@"Shader path = %@", shaderPath);
-    m_Library = [self.device newDefaultLibrary];
+    NSError* libraryError = nil;
+    m_Library = [self.device newLibraryWithURL:[NSURL fileURLWithPath:shaderPath] error:&libraryError];
+    if (!m_Library) {
+        NSLog(@"Failed to load shader library: %@", libraryError);
+        exit(1);
+    }
     id <MTLFunction> vertFunc = [m_Library newFunctionWithName:@"vert"];
     id <MTLFunction> fragFunc = [m_Library newFunctionWithName:@"frag"];
     
