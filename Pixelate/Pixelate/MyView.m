@@ -82,8 +82,8 @@ int bitsPerComponent;
     self.button = [[NSButton alloc] initWithFrame:NSMakeRect(0, 0, 50, 50)];
     [self addSubview: self.button];
     [self.button setTitle: @"Test Button!"];
-    [self.button setButtonType:NSMomentaryLightButton]; //Set what type button You want
-    [self.button setBezelStyle:NSRoundedBezelStyle]; //Set what style You want
+    [self.button setButtonType:NSButtonTypeMomentaryLight]; //Set what type button You want
+    [self.button setBezelStyle:NSBezelStyleRounded]; //Set what style You want
     
     [self.button setTarget:self];
     //button = myButton;
@@ -116,7 +116,7 @@ int bitsPerComponent;
     // Set pipeline state objects for the compute pipeline.
     [commandEncoder setComputePipelineState:pipelineState];
     
-    uint8* data = [self dataFromNSImage:inputImage];
+    const uint8* data = [self dataFromNSImage:inputImage];
     for (int index=0; index<imageWidth*imageHeight; index++)
     {
         inputBufferBytes[4*index+0] = data[4*index+3];  // Alpha

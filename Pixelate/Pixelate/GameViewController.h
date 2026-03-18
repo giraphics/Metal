@@ -6,7 +6,7 @@
 #import <Cocoa/Cocoa.h>
 #import <MetalKit/MTKView.h>
 
-@interface GameViewController : NSViewController<MTKViewDelegate>
+@interface GameViewController : NSViewController
 
 
 @end
