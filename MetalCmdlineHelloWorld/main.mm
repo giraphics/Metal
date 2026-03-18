@@ -19,7 +19,7 @@ int main ()
         // Create the prestable window.
         NSRect frame = NSMakeRect(0, 0, 512, 512);
         int style =
-        NSTitledWindowMask | NSClosableWindowMask | NSResizableWindowMask | NSMiniaturizableWindowMask;
+        NSWindowStyleMaskTitled | NSWindowStyleMaskClosable | NSWindowStyleMaskResizable | NSWindowStyleMaskMiniaturizable;
         NSWindow* window = [[NSWindow alloc] initWithContentRect:frame
                                                        styleMask:style
                                                          backing:NSBackingStoreBuffered
@@ -86,7 +86,7 @@ const int UniformBufferCount = 3;
     NSLog(@"Shader path = %@", shaderPath);
 
     NSError *error = nil;
-    metalLibrary = [self.device newLibraryWithFile:shaderPath error:&error];
+    metalLibrary = [self.device newLibraryWithURL:[NSURL fileURLWithPath:shaderPath] error:&error];
     if (!metalLibrary) {
         NSLog(@"Failed to load library. error %@", error);
         exit(0);
@@ -117,7 +117,7 @@ const int UniformBufferCount = 3;
 
     // Create pipeline state.
     MTLRenderPipelineDescriptor *pipelineDesc   = [MTLRenderPipelineDescriptor new];
-    pipelineDesc.sampleCount                    = self.sampleCount;
+    pipelineDesc.rasterSampleCount              = self.sampleCount;
     pipelineDesc.vertexFunction                 = vertFunc;
     pipelineDesc.fragmentFunction               = fragFunc;
     pipelineDesc.vertexDescriptor               = vertDesc;
@@ -182,6 +182,8 @@ const int UniformBufferCount = 3;
     viewport.originY    = 0;
     viewport.width      = self.drawableSize.width;
     viewport.height     = self.drawableSize.height;
+    viewport.znear      = 0.0;
+    viewport.zfar       = 1.0;
     
     [encoder setViewport                    :viewport];
     [encoder setDepthStencilState           :depthState];
