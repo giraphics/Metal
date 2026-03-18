@@ -269,8 +269,8 @@ struct Vertex
                       mipmapLevel : 0
                         withBytes : imageBits
                       bytesPerRow : bytesPerRow];
-    
-    delete imageBits;
+
+    CFRelease(pixelData);
 }
 
 - (void) CreateFBO:(int)fboWidth  height: (int)fboHeight
@@ -427,7 +427,9 @@ struct Vertex
     viewport.originY = 0;
     viewport.width   = FBO_SIZE_WIDTH;
     viewport.height  = FBO_SIZE_HEIGHT;
-    
+    viewport.znear   = 0.0;
+    viewport.zfar    = 1.0;
+
     [encoder setViewport            : viewport];
     [encoder setRenderPipelineState : m_PipelineState];
     
@@ -506,7 +508,9 @@ struct Vertex
     viewport.originY = 0;
     viewport.width   = self.drawableSize.width;
     viewport.height  = self.drawableSize.height;
-    
+    viewport.znear   = 0.0;
+    viewport.zfar    = 1.0;
+
     [encoder setViewport : viewport];
     [encoder setRenderPipelineState : m_PipelineState];
     
@@ -595,18 +599,22 @@ struct Vertex
     
     CGColorSpaceRef rgbColorSpace           = CGColorSpaceCreateDeviceRGB();
     CGBitmapInfo bitmapInfo                 = kCGBitmapByteOrderDefault | kCGImageAlphaPremultipliedFirst; // Doubt
-    
-    CGDataProviderRef providerRef           = CGDataProviderCreateWithData(NULL, inputBufferBytes, bufferLength, NULL);
-    
+
+    auto releaseCallback = [](void*, const void* data, size_t) { free(const_cast<void*>(data)); };
+    CGDataProviderRef providerRef           = CGDataProviderCreateWithData(NULL, inputBufferBytes, bufferLength, releaseCallback);
+
     int bitsPerPixel                        = bytesPerPixel * bitsPerComponent;
     CGColorRenderingIntent renderingIntent  = kCGRenderingIntentDefault;
     CGImageRef cgim                         = CGImageCreate( imageWidth, imageHeight, bitsPerComponent,
                                                             bitsPerPixel, bytesPerRow, rgbColorSpace, bitmapInfo,
                                                             providerRef, NULL, YES, renderingIntent);
-    
+
     NSImage* image = [[NSImage alloc] initWithCGImage:cgim size:NSMakeSize(imageWidth, imageHeight)];
     self.imageView.image = image;
-    
+
+    CGImageRelease(cgim);
+    CGDataProviderRelease(providerRef);
+    CGColorSpaceRelease(rgbColorSpace);
     free(pixelBytes);
 }
 @end
